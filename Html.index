@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Engineering Fun Facts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin: 0 0 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #fact {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            min-height: 60px;
+            background-color: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 ChemEng Fun Facts</h1>
+        <p class="description">Learn something new about chemical engineering!</p>
+        <button onclick="displayFact()">Get a Random Fact</button>
+        <p id="fact"></p>
+    </div>
+
+    <script>
+        const facts = [
+            "Chemical engineering is a field that combines principles of chemistry, physics, and mathematics to design and optimize industrial chemical processes.",
+            "Did you know that chemical engineers designed the process to make insulin, saving millions of lives from diabetes worldwide?",
+            "The first chemical engineer degree was awarded at MIT in 1888, making it one of the oldest engineering disciplines.",
+            "Chemical engineers are involved in various industries including pharmaceuticals, energy production, water treatment, food processing, and materials science.",
+            "The Haber-Bosch process, developed by chemical engineers, produces ammonia for fertilizers that feed about 40% of the world's population!",
+            "Chemical engineers designed the systems used to purify drinking water and treat wastewater, making them essential for public health.",
+            "Catalysis, a key concept in chemical engineering, allows chemical reactions to happen faster and more efficiently, saving energy and money.",
+            "Chemical engineers played a crucial role in developing sustainable biofuels as an alternative to fossil fuels.",
+            "The separation of crude oil into different products like gasoline, diesel, and jet fuel is done using principles developed by chemical engineers.",
+            "Chemical engineers design reactors and separation equipment that can scale up laboratory discoveries to industrial production levels."
+        ];
+
+        function displayFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
